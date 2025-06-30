@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Documentation for AI Prompt Studio – a prompt management web app." />
+  <title>AI Prompt Studio Documentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --secondary: #7c3aed;
+      --background: #f9fafb;
+      --text: #1f2937;
+      --code-bg: #e5e7eb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem;
+    }
+    h1, h2, h3, h4 {
+      color: var(--primary);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: var(--code-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background: var(--code-bg);
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Prompt Studio: Documentation</h1>
+    <p>This document provides a complete guide to installing, using, and customizing the AI Prompt Studio application.</p>
+
+    <h2>1. Introduction</h2>
+    <p><strong>AI Prompt Studio</strong> is a premium, production-ready web application designed for managing AI prompts with advanced organization features. Built with a modern React and TypeScript stack, it provides a complete, offline-ready solution for content creators, developers, and AI enthusiasts to organize their prompt libraries efficiently.</p>
+
+    <h2>2. Installation & Setup</h2>
+
+    <h3>2.1. Prerequisites</h3>
+    <p>Make sure you have <a href="https://nodejs.org/" target="_blank">Node.js</a> and <code>npm</code> installed on your system.</p>
+
+    <h3>2.2. Quick Start</h3>
+    <ol>
+      <li>Extract the downloaded ZIP package to your desired folder.</li>
+      <li>Open a terminal, navigate to the project directory, and run:
+        <pre><code>npm install</code></pre>
+      </li>
+      <li>Start the development server:
+        <pre><code>npm run dev</code></pre>
+      </li>
+      <li>Visit <code>http://localhost:5173</code> in your browser.</li>
+    </ol>
+
+    <h3>2.3. Build for Production</h3>
+    <p>To create a production-ready build:</p>
+    <pre><code>npm run build</code></pre>
+    <p>Preview the build locally:</p>
+    <pre><code>npm run preview</code></pre>
+
+    <h2>3. Core Features</h2>
+    <ul>
+      <li>Create, edit, and delete prompts</li>
+      <li>Organize prompts with tags, categories, and colored prompt packs</li>
+      <li>Search and filter by title, tags, or description</li>
+      <li>Import/Export prompts (JSON/TXT)</li>
+      <li>Data stored locally in browser</li>
+      <li>Usage analytics and statistics dashboard</li>
+      <li>Responsive design + dark/light mode</li>
+      <li>One-click copy and toast notifications</li>
+    </ul>
+
+    <h2>4. Technical Documentation</h2>
+
+    <h3>4.1. Tech Stack</h3>
+    <ul>
+      <li>React 18</li>
+      <li>TypeScript</li>
+      <li>Tailwind CSS</li>
+      <li>Vite</li>
+      <li>Lucide React Icons</li>
+    </ul>
+
+    <h3>4.2. Dependencies</h3>
+    <pre><code>{
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "react-hot-toast": "^2.4.1",
+  "lucide-react": "^0.344.0"
+}</code></pre>
+
+    <h3>4.3. File Structure</h3>
+    <pre><code>src/
+├── components/
+│   ├── Header.tsx
+│   ├── PromptCard.tsx
+│   ├── PromptForm.tsx
+│   ├── PromptPacks.tsx
+│   ├── SearchFilter.tsx
+│   └── Statistics.tsx
+├── context/
+│   └── ThemeContext.tsx
+├── hooks/
+│   └── useLocalStorage.ts
+├── types/
+│   └── index.ts
+├── utils/
+│   └── export.ts
+├── App.tsx
+├── main.tsx
+└── index.css</code></pre>
+
+    <h2>5. Customization</h2>
+    <ul>
+      <li><strong>Theming:</strong> Edit <code>tailwind.config.js</code> to adjust colors and UI tokens</li>
+      <li><strong>Component-based:</strong> Easily replace or extend modular components</li>
+      <li><strong>Type-safe:</strong> Make changes confidently using TypeScript</li>
+    </ul>
+
+    <h3>5.1. Design System</h3>
+    <ul>
+      <li><strong>Primary:</strong> Indigo (500–600)</li>
+      <li><strong>Secondary:</strong> Purple (500–600)</li>
+      <li><strong>Font:</strong> Inter</li>
+      <li><strong>Base spacing:</strong> 8px scale</li>
+    </ul>
+
+    <h2>6. Browser Support</h2>
+    <ul>
+      <li>Chrome 90+</li>
+      <li>Firefox 88+</li>
+      <li>Safari 14+</li>
+      <li>Edge 90+</li>
+    </ul>
+
+    <h2>7. Support</h2>
+    <ul>
+      <li>Email support (6–12 months based on license)</li>
+      <liFree updates and documentation access</li>
+    </ul>
+
+    <h2>8. Author</h2>
+    <p>
+      <strong>Name:</strong> Samuel Simiyu<br>
+      <strong>Portfoilo:</strong>strong> <a href="https://simiyu-samuel.vercel.app" target="_blank">Visit my portfolio</a>
+      <strong>Email:</strong> <a href="mailto:simiyusamuel869@gmail.com">simiyusamuel869@gmail.com</a><br>
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/samuel-simiyu-63270a236" target="_blank">View Profile</a>
+    </p>
+
+    <div class="footer">
+      &copy; 2025 AI Prompt Studio. Built by Samuel Simiyu.
+    </div>
+  </div>
+</body>
+</html>
